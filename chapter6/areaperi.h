@@ -1,0 +1,8 @@
+# define AREACIRCLE(r) (3.14 * r * r)
+# define PERICIRCLE(r) (2 * 3.14 * r)
+# define AREATRIANGLE(b, h) (0.5 * b * h)
+# define PERITRIANGLE(x, y, z) (x + y + z)
+# define AREASQUARE(x) (x * x)
+# define PERISQUARE(x) (x * 4)
+# define PERIRECT(x , y) (2 * (x + y))
+# define AREARECT(x, y) (x * y)
