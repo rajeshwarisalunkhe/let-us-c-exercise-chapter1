@@ -1,0 +1,50 @@
+/* Write a program to delete all vowels from sentence. Assume that the sentence is not more than 80 character long */
+
+#include <stdio.h>
+#include <stdlib.h>
+int main(void)
+{
+	char *sentence;
+	int i = 0, j, size;
+	
+	do
+	{
+		printf("enter size of character array:");
+		scanf("%d", &size);
+		if(size == 0)
+		{
+			printf("size can not be zero... Please enter again\n");
+		}
+		
+	}while(size == 0);
+	sentence = malloc(size * sizeof(char));
+	printf("enter the character:");
+	for(j = 0;j < size;j++)
+	{
+		scanf(" %c", &sentence[j]);
+	}
+
+	while(size > i)
+	{
+		if(sentence[i] == 'a' || sentence[i] == 'e' || sentence[i] == 'i' || sentence[i] == 'o' || sentence[i] == 'u' )
+		{
+			for(j = i; j < size;j++)
+			{
+				sentence[j] = sentence[j + 1];
+			}
+			size--;
+			printf("size is %d\n", size);
+		}
+		else
+		{
+			i++;
+		}
+	}
+
+	for(j = 0;j < size;j++)
+	{
+		printf("%c", sentence[j]);
+	}
+
+	printf("\n");
+}

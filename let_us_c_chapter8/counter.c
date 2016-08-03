@@ -1,0 +1,49 @@
+/* 5 Twenty five numbers are entered from the keyboard into an array.
+Write a program to find out how many of them are positive , how many are negative 
+how many are even and how many are odd. */
+
+#include <stdio.h>
+
+int main(void)
+{
+	int i, number[10], counter_even = 0, counter_odd = 0, counter_positive = 0, counter_negative = 0;
+
+	for(i = 0;i < 10;i++)
+	{
+		printf("enter the number:");
+		scanf("%d", &number[i]);
+	}
+	i = 0;
+	while(i < 10)
+	{
+		if(number[i] > 0)
+		{
+			counter_positive++;
+			if(number[i] % 2 == 0)
+			{
+				counter_even++;
+			}
+			else
+			{
+				counter_odd++;
+			}
+		}
+		else
+		{
+			counter_negative++;
+			if(number[i] % 2 == 0)
+			{
+				counter_even++;
+			}
+			else
+			{
+				counter_odd++;
+			}
+		}
+		i++;
+	}
+	printf("no of positive numbers %d\n", counter_positive++);
+	printf("no of negative numbers %d\n", counter_negative++);
+	printf("no of even numbers %d\n", counter_even++);
+	printf("no of odd numbers %d\n", counter_odd++);
+}
